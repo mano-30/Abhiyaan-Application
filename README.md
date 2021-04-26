@@ -26,6 +26,7 @@ Because I think the team is the best ;)
 Relevant Courses:
 ----------------
 In Institute
+------------
 EE1103
 
 Doing
