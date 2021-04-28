@@ -1,3 +1,4 @@
 This folder contains the solutions of PART A of the application
+The catkin workspace contains my attempts for all the 4 problems.
 I was able to publish and subscribe the nodes, but i was not able to return the messages appended together
 I also could not complete the turtle problem but i have written code but it is throwing logical errors
