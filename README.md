@@ -21,8 +21,7 @@ None
 
 Why I want to work in the team:
 ------------------------------
-Because I think the team is the best ;)
-
+Because I believe I can fit in the time and have the will to finish whatever I started
 Relevant Courses:
 ----------------
 In Institute
