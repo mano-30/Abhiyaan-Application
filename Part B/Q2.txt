@@ -1,0 +1,23 @@
+Solution:
+
+   We can use an extended Kalman Filter.
+   This algorithm can be used to estimate the following features accurately: position, velocity and angular orientation of the vehicle.
+   
+   The Extended Kalman Filter algorithm provides us with a way of combining or fusing data from the IMU, GPS, compass, airspeed, barometer
+   and other sensors to calculate a more accurate and reliable estimate of our position, velocity and angular orientation using some tuning parameters.
+   
+   The algorithm estimates these parameters using this strategy:
+   
+   1. IMU Angular rates obtained from rate gyroscope are integrated to calculate the angular position.
+   2. The IMU acceleratiosn in (X,Y,Z) from the accelerometer are converted to acceleration in terms of North,East,Down.
+   3. These accelerations are integrated to get the velocities.
+   4. Velocities is integrated to get the postitions. 
+   5. Estimated gyro and accelerometer noise (EKF_GYRO_NOISE and EKF_ACC_NOISE) are used to estimate the growth in error in the angles, 
+      velocities and position calculated using IMU data. Making these parameters larger causes the filters error estimate to grow faster. 
+      If no corrections are made using other measurements (eg GPS), this error estimate will continue to grow. 
+      These estimated errors are captured in a large matrix.
+   6. When a GPS measurement arrives, the filter calculates the difference between the predicted position from 4) and the position from the GPS.
+   7. The difference from 6), matrix from 5), and the GPS measurement error specified by EKF_POSNE_NOISE are combined to calculate a correction to each of the filter states. 
+   8. Because we have now taken a measurement, the amount of uncertainty in each of the states that have been updated is reduced.
+   
+   
